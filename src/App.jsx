@@ -1,18 +1,22 @@
 
 import './App.css'
-import Home from './Components/Pages/Home'
+import RootLayouts from './Components/Layouts/RootLayouts';
+import { Routes, Route } from "react-router-dom";
 
-
-
-
-
-
+import Error from './Components/Pages/Error';
+import Home from './Components/Pages/Home';
 function App() {
 
 
   return (
     <>
-    <Home></Home>
+    <Routes>
+        <Route path="/" element={<RootLayouts />}>
+          <Route index element={< Home />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+
     </>
   )
 }

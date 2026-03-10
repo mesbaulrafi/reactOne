@@ -1,11 +1,10 @@
-import Header from "../Layouts/Header"
-
+import React from 'react'
+import Benner from '../Layouts/Benner'
 
 const Home = () => {
   return (
-   
     <>
-    <Header></Header>
+   <Benner/>
     </>
   )
 }
